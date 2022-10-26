@@ -8,14 +8,14 @@ import {
 
 export const AlertProvider: AlertProviderElement = ({ defaultStyle, children }) => {
   const [alerts, setAlerts] = useState<AlertData[]>([]);
-  const [style, setStyle] = useState<StyledAlertElement>(defaultStyle);
+  const [currentStyle, setCurrentStyle] = useState<StyledAlertElement>(defaultStyle);
 
   return (
     <AlertContext.Provider value={{
       alerts,
       setAlerts,
-      style,
-      setStyle
+      defaultStyle: currentStyle,
+      setDefaultStyle: setCurrentStyle
     }}>
       {children}
     </AlertContext.Provider>

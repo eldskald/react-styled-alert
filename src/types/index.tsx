@@ -6,15 +6,13 @@ export type StyledAlertProps = {
   onCancel: (() => void) | null
 };
 
+export type StyledAlertElement = FunctionComponent<
+  StyledAlertProps
+>;
+
 export type AlertProviderProps = {
   defaultStyle: StyledAlertElement
 };
-
-export type StyledAlertElement = FunctionComponent<
-  StyledAlertProps & {
-    children?: ReactNode
-  }
->;
 
 export type AlertProviderElement = FunctionComponent<
   AlertProviderProps & {
@@ -24,7 +22,7 @@ export type AlertProviderElement = FunctionComponent<
 
 export type AlertData = {
   message: string,
-  onOk: () => void,
-  onCancel: (() => void) | null,
-  style: StyledAlertElement | null
+  onOk: (() => void),
+  onCancel: (() => void) | undefined,
+  style: StyledAlertElement | undefined
 };

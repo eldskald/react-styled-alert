@@ -4,11 +4,11 @@ import { AlertData, StyledAlertElement } from 'types';
 export const AlertContext = createContext<{
   alerts: AlertData[],
   setAlerts: React.Dispatch<React.SetStateAction<AlertData[]>>,
-  style: StyledAlertElement,
-  setStyle: React.Dispatch<StyledAlertElement>
+  defaultStyle: StyledAlertElement,
+  setDefaultStyle: React.Dispatch<StyledAlertElement>
 }>({
   alerts: [],
   setAlerts: () => {return},
-  style: () => <></>,
-  setStyle: () => {return}
+  defaultStyle: () => <></>,
+  setDefaultStyle: () => {return}
 });
