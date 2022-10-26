@@ -1,10 +1,9 @@
 {
   "name": "react-styled-alert",
+  "description": "Styled alerts that don't lock the browser",
   "author": "Rafael Bordoni (https://github.com/eldskald)",
   "license": "MIT",
   "version": "1.0.0",
-  "description": "Styled alerts that don't lock the browser",
-  "main": "dist/index.js",
   "keywords": [
     "react",
     "typescript",
@@ -13,13 +12,35 @@
     "styled",
     "popup"
   ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eldskald/react-styled-alert"
+  },
   "scripts": {
-    "build": "tsc"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
     "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@vitejs/plugin-react": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
   }
 }
