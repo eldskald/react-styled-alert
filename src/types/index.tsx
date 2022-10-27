@@ -26,3 +26,10 @@ export type AlertData = {
   onCancel: (() => void) | undefined,
   style: StyledAlertElement | undefined
 };
+
+export type StyledAlertCaller = (
+  message: string,
+  onOk: (() => void) | undefined,
+  onCancel: (() => void) | undefined,
+  style: StyledAlertElement | undefined
+) => void;

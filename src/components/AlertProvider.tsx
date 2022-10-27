@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AlertContext } from 'contexts';
+import { StyledAlert } from 'components';
 import {
   AlertProviderElement,
   AlertData,
@@ -18,6 +19,7 @@ export const AlertProvider: AlertProviderElement = ({ defaultStyle, children }) 
       setDefaultStyle: setCurrentStyle
     }}>
       {children}
+      <StyledAlert/>
     </AlertContext.Provider>
   );
 };
