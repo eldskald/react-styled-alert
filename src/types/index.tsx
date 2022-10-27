@@ -1,4 +1,4 @@
-import { FunctionComponent, ReactNode } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 
 export type StyledAlertProps = {
   message: string,
@@ -33,3 +33,5 @@ export type StyledAlertCaller = (
   onCancel: (() => void) | undefined,
   style: StyledAlertElement | undefined
 ) => void;
+
+export type StyleSetter = React.Dispatch<StyledAlertElement>;
