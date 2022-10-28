@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 
 export type StyledAlertProps = {
-  message: string,
+  message: ReactNode,
   onOk: (() => void),
   onCancel: (() => void) | null
 };
@@ -21,14 +21,14 @@ export type AlertProviderElement = FunctionComponent<
 >;
 
 export type AlertData = {
-  message: string,
+  message: ReactNode,
   onOk: (() => void),
   onCancel: (() => void) | undefined,
   style: StyledAlertElement | undefined
 };
 
 export type StyledAlertCaller = (
-  message: string,
+  message: ReactNode,
   onOk: (() => void) | undefined,
   onCancel: (() => void) | undefined,
   style: StyledAlertElement | undefined
