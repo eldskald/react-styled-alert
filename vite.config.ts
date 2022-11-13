@@ -6,18 +6,20 @@ import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/src/',
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'main.tsx'),
+      entry: path.resolve(__dirname, 'src/main.tsx'),
       name: 'react-styled-alert',
-      fileName: (format) => `react-styled-alert.${format}.js`,
-      formats: ['es', 'cjs']
+      fileName: 'main',
+      formats: ['es', 'umd']
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
       output: {
         globals: {
-          react: 'React'
+          'react': 'React',
+          'react-dom': 'ReactDOM'
         }
       },
       plugins: [
@@ -28,8 +30,8 @@ export default defineConfig({
           sourceMap: false,
           declaration: true,
           outDir: "dist",
-        })
-      ]
-    }
-  }
+        }),
+      ],
+    },
+  },
 });

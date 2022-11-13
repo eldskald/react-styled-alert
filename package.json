@@ -12,22 +12,21 @@
     "styled",
     "popup"
   ],
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.es.js",
-  "typings": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eldskald/react-styled-alert"
+  },
+  "main": "./dist/main.umd.js",
+  "module": "./dist/main.mjs",
+  "typings": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.umd.js"
+    }
   },
   "scripts": {
     "dev": "vite",

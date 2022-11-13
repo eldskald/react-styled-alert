@@ -1,18 +1,17 @@
 import { useContext, ReactNode } from 'react';
 import { AlertContext } from 'contexts';
-import { StyledAlertElement, StyledAlertCaller } from 'types';
+import { StyledAlertCaller, AlertData } from 'types';
 
 export const useAlert = () => {
   const { setAlerts } = useContext(AlertContext);
   return ((
-    message: ReactNode,
+    content: ReactNode,
     onOk: () => void = () => {return},
-    onCancel?: () => void,
-    style?: StyledAlertElement
+    onCancel?: () => void
   ) => {
     setAlerts(prev => [
       ...prev,
-      { message, onOk, onCancel, style }
+      { content, onOk, onCancel } as AlertData
     ]);
   }) as StyledAlertCaller;
 };

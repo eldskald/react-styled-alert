@@ -1,2 +1,2 @@
 export * from './useAlert';
-export * from './useStyleSetter';
+export * from './useAlertData';

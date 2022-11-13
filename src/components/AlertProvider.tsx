@@ -1,25 +1,15 @@
 import React, { useState } from 'react';
 import { AlertContext } from 'contexts';
-import { StyledAlert } from 'components';
-import {
-  AlertProviderElement,
-  AlertData,
-  StyledAlertElement
-} from 'types';
+import { StyledAlertProvider, AlertData } from 'types';
 
-export const AlertProvider: AlertProviderElement = ({ defaultStyle, children }) => {
+export const AlertProvider: StyledAlertProvider = ({ children }) => {
   const [alerts, setAlerts] = useState<AlertData[]>([]);
-  const [currentStyle, setCurrentStyle] = useState<StyledAlertElement>(defaultStyle);
-
   return (
     <AlertContext.Provider value={{
       alerts,
-      setAlerts,
-      defaultStyle: currentStyle,
-      setDefaultStyle: setCurrentStyle
+      setAlerts
     }}>
       {children}
-      <StyledAlert/>
     </AlertContext.Provider>
   );
 };
