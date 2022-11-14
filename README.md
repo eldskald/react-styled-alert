@@ -128,10 +128,10 @@ function StyledAlert() {
 
 This component will return nothing if `useAlertData()` returns null, so whenever you use the return function of `useAlert`, it will render this component. If you call it with no `onCancel` argument, this component will only render the Ok button, otherwise it renders a Cancel button as well. You're free to make this component however you want, just make sure to call `onOk` somewhere or else you risk making alerts that never go away.
 
-# Credits
+## Credits
 
 By [Rafael de Lima Bordoni](https://www.github.com/eldskald).
 
-# License
+## License
 
 Licensed under MIT.
