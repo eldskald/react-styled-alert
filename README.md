@@ -1,6 +1,6 @@
-# React-Styled-Alert
+# react-styled-alert
 
-React-Styled-Alert allows you to use react components in place of the usual alert popup, allowing you to style them however you want as well as execute code.
+react-styled-alert allows you to use react components in place of the usual alert popup, allowing you to style them however you want as well as execute code.
 
 ## Installation
 

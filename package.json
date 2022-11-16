@@ -17,14 +17,14 @@
     "url": "git+https://github.com/eldskald/react-styled-alert"
   },
   "main": "./dist/main.umd.js",
-  "module": "./dist/main.mjs",
+  "module": "./dist/main.es.js",
   "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/main.mjs",
+      "import": "./dist/main.es.js",
       "require": "./dist/main.umd.js"
     }
   },
