@@ -3,7 +3,7 @@
   "description": "Styled alerts that don't lock the browser",
   "author": "Rafael Bordoni (https://github.com/eldskald)",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "keywords": [
     "react",
     "typescript",
@@ -18,7 +18,7 @@
   },
   "main": "./dist/main.umd.js",
   "module": "./dist/main.mjs",
-  "typings": "./dist/types/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -33,16 +33,16 @@
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^9.0.2",
     "@types/node": "^18.11.7",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
     "@vitejs/plugin-react": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "rollup-plugin-typescript-paths": "^1.4.0",
     "tslib": "^2.4.0",
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.7.1",
+    "vite-tsconfig-paths": "^3.5.2"
   }
 }

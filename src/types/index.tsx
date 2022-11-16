@@ -5,9 +5,9 @@ export type StyledAlertProvider = FunctionComponent<{
 }>;
 
 export type AlertData = {
-  content: ReactNode,
-  onOk: () => void,
-  onCancel?: () => void
+  content: ReactNode;
+  onOk: () => void;
+  onCancel?: () => void;
 };
 
 export type StyledAlertCaller = (
