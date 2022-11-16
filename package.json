@@ -3,7 +3,7 @@
   "description": "Styled alerts that don't lock the browser",
   "author": "Rafael Bordoni (https://github.com/eldskald)",
   "license": "MIT",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "keywords": [
     "react",
     "typescript",
