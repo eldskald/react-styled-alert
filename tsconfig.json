@@ -20,7 +20,6 @@
     "noImplicitReturns": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "baseUrl": "./src",
     "outDir": "dist"
   },
   "include": ["./src"],
